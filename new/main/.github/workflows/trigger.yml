@@ -1,0 +1,16 @@
+name: Trigger Redeploy
+
+on:
+  schedule:
+    - cron: '0 * * * *'
+  workflow_dispatch:
+
+jobs:
+  trigger:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger mg-Koyebb redeploy
+        env:
+          GH_TOKEN: *** secrets.GH_PAT }}
+        run: |
+          gh workflow run redeploy.yml -R qiuguanrong/mg-Koyebb
