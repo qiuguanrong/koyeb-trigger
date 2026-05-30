@@ -11,7 +11,7 @@ jobs:
     steps:
       - name: Trigger mg-Koyebb redeploy
         env:
-          GH_TOKEN: *** secrets.GH_PAT }}
+          GH_TOKEN: '${{ secrets.GH_PAT }}'
         run: |
           gh workflow run redeploy.yml -R qiuguanrong/mg-Koyebb
           
