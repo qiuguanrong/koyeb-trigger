@@ -14,3 +14,4 @@ jobs:
           GH_TOKEN: *** secrets.GH_PAT }}
         run: |
           gh workflow run redeploy.yml -R qiuguanrong/mg-Koyebb
+          
